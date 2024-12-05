@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #87ceeb; /* голубое небо */
+  overflow: hidden;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.road {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  height: 100px;
+  background-color: gray;
+}
+
+.car {
+  position: absolute;
+  bottom: 130px;
+  width: 200px;
+  height: 100px;
+  animation: drive 6s linear infinite;
+}
+
+.car .roof {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50px 50px 0 0;
+  top: 0;
+  left: 50px;
+}
+
+.car .body {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background-color: red;
+  border-radius: 10px;
+  bottom: 0;
+}
+
+.car .wheel {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
+  bottom: -20px;
+}
+
+.car .wheel.front {
+  left: 140px;
+}
+
+.car .wheel.back {
+  left: 20px;
+}
+
+@keyframes drive {
+  0% {
+    transform: translateX(-220px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 20px));
+  }
+}

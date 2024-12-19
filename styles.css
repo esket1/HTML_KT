@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #87ceeb; /* голубое небо */
+  background-color: #87ceeb;
   overflow: hidden;
 }
 
@@ -24,7 +24,7 @@ body {
   bottom: 130px;
   width: 200px;
   height: 100px;
-  animation: drive 6s linear infinite;
+  animation: drive 6s linear forwards;
 }
 
 .car .roof {
@@ -67,7 +67,10 @@ body {
   0% {
     transform: translateX(-220px);
   }
+  90% {
+    transform: translateX(calc(100vw - 220px));
+  }
   100% {
-    transform: translateX(calc(100vw + 20px));
+    transform: translateX(calc(100vw - 220px));
   }
 }
